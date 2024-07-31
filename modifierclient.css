@@ -1,0 +1,102 @@
+/* Styles généraux pour la page Modifier Client */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* Fond léger pour le contraste */
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr;
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff; /* Fond blanc pour le formulaire */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    overflow: hidden; /* Empêche le débordement */
+}
+
+h2 {
+    text-align: center;
+    color: #333; /* Couleur sombre pour les titres */
+    margin: 0;
+}
+
+form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Deux colonnes de largeur égale */
+    gap: 15px;
+    background-color: #fff; /* Fond blanc pour le formulaire */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    grid-template-rows: auto;
+}
+
+label {
+    font-weight: bold;
+    color: #333;
+}
+
+input[type="text"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    grid-column: span 2; /* Le bouton s'étend sur les deux colonnes */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff; /* Couleur bleue pour le bouton */
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3; /* Couleur bleue plus sombre au survol */
+}
+
+.message {
+    padding: 15px;
+    background-color: #e0e0e0; /* Fond gris pour les messages */
+    border-left: 5px solid #007bff; /* Bordure bleue pour les messages */
+    border-radius: 4px;
+    margin-top: 20px;
+}
+
+.message p {
+    margin: 0;
+    color: #333;
+}
+
+/* Responsivité */
+@media (max-width: 600px) {
+    main {
+        padding: 15px;
+    }
+
+    form {
+        grid-template-columns: 1fr; /* Une colonne sur les petits écrans */
+    }
+
+    button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}

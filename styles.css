@@ -1,0 +1,57 @@
+/* Reset CSS pour éliminer les différences entre navigateurs */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+    overflow: hidden; /* Empêche le défilement global */
+}
+
+.site-header, .site-footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    height: calc(100vh - 140px); /* Ajuste selon la hauteur de header et footer */
+    overflow: auto; /* Permet le défilement si nécessaire à l'intérieur du container */
+    padding: 2rem;
+    background-color: #fff;
+    margin: 2rem auto;
+    width: 80%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.site-footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}

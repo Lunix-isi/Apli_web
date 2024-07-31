@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Tri des Clients</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Tri des Clients</h1>
+    <form action="tri_clients.php" method="get">
+        <label for="tri">Trier par :</label>
+        <select id="tri" name="tri">
+            <option value="nom">Nom</option>
+            <option value="prenom">Prénom</option>
+            <option value="etat">État de Paiement</option>
+            <option value="consom3">Consommation</option>
+        </select>
+        <button type="submit">Trier</button>
+    </form>
+    
+    <div id="results">
+        <?php
+        // Inclure le fichier PHP qui contient la logique de tri
+        include('tri_clients.php');
+        ?>
+    </div>
+</body>
+</html>
